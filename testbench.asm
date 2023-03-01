@@ -12,7 +12,9 @@ main:
 
 	# change the character to lowercase
 	addiu $t2, $t1, 32
-	move $a0, $t2
+	sb $t2, 0($t0)
+	lb $t1, 0($t0)
+	move $a0, $t1
 	syscall
 	
 exit:
